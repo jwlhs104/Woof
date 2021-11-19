@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Woof/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/Woof/static/js/main.a37c1f99.chunk.js",
+    "main.js.map": "/Woof/static/js/main.a37c1f99.chunk.js.map",
+    "runtime-main.js": "/Woof/static/js/runtime-main.e2ed5df2.js",
+    "runtime-main.js.map": "/Woof/static/js/runtime-main.e2ed5df2.js.map",
+    "static/js/2.17183b8a.chunk.js": "/Woof/static/js/2.17183b8a.chunk.js",
+    "static/js/2.17183b8a.chunk.js.map": "/Woof/static/js/2.17183b8a.chunk.js.map",
+    "static/js/3.f442b96e.chunk.js": "/Woof/static/js/3.f442b96e.chunk.js",
+    "static/js/3.f442b96e.chunk.js.map": "/Woof/static/js/3.f442b96e.chunk.js.map",
+    "index.html": "/Woof/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/Woof/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.17183b8a.chunk.js.LICENSE.txt": "/Woof/static/js/2.17183b8a.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/Woof/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2ed5df2.js",
+    "static/js/2.17183b8a.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.a37c1f99.chunk.js"
+  ]
+}
