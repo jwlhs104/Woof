@@ -1,9 +1,16 @@
 import './App.css';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 function App() {
   const [count, setCount] = useState(0);
   const [show, setShow] = useState(false);
+  useEffect(()=>{
+    fetch('/leaderboard')
+    .then(response => response.json())
+    .then(data => {
+      setCount(data[0]['count'])
+    })
+  }, [])
   return (
     <div className="App">
       <header className="App-header">
@@ -14,7 +21,7 @@ function App() {
             setCount(count+1)
             setShow(true)
 
-            const dog = {"name":"Dog1", "count":count+1};
+            const dog = {"name":"Dog1", "count":1};
             console.log(JSON.stringify(dog))
             fetch('/dog', {
               method: 'POST',
