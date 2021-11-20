@@ -16,7 +16,7 @@ function App() {
 
             const dog = {"name":"Dog1", "count":count+1};
             console.log(JSON.stringify(dog))
-            fetch('http://localhost:8000/dog', {
+            fetch('/dog', {
               method: 'POST',
               headers: { "Content-Type": "text/json"},
               body: JSON.stringify(dog)
