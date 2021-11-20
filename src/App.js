@@ -13,14 +13,20 @@ function App() {
           {
             setCount(count+1)
             setShow(true)
-            console.log(show)
+
+            const dog = {"name":"Dog1", "count":count+1};
+            console.log(JSON.stringify(dog))
+            fetch('http://localhost:8000/dog', {
+              method: 'POST',
+              headers: { "Content-Type": "text/json"},
+              body: JSON.stringify(dog)
+            })
           }
         }>
           <div 
             className={show ? 'Woof' : 'Woof hide'}
             onTransitionEnd={() => {
               setShow(false)
-              console.log(show)
             }
             }
           >
