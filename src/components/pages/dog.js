@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { useWeb3React } from "@web3-react/core"
 import { injected } from "../wallet/connectors"
+import LeaderBoard from "./leaderboard"
 
 export default function Dog () {
   const { active, account, activate} = useWeb3React()
@@ -8,6 +9,7 @@ export default function Dog () {
   const [show, setShow] = useState(false);
   const [image, setImage] = useState('');
   const [dogId, setDogId] = useState('Dog1');
+  const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(connect_callback, [account])
 
@@ -66,11 +68,17 @@ export default function Dog () {
           setShow(true)
 
           const dog = {"name": dogId, "count":1};
-          console.log(JSON.stringify(dog))
           fetch('/add_dog', {
             method: 'POST',
             headers: { "Content-Type": "text/json"},
             body: JSON.stringify(dog)
+          })
+          .then(()=>{
+            fetch('/leaderboard')
+            .then(response => response.json())
+            .then(data => {
+              setLeaderboard(data)
+            })
           })
         }
       }>
@@ -86,7 +94,8 @@ export default function Dog () {
       </div>
       }
       {!active && <button onClick={connect}>Connect to MetaMask</button>}
-      {active && <div>Connected with <b>{account}</b></div>}
+      {active && <div id="Connect">Connected with <b>{account}</b></div>}
+      <LeaderBoard table={leaderboard}/>
     </div>
   )
 }
