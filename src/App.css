@@ -29,6 +29,7 @@
   background-size: contain;
   cursor: pointer;
   position:relative;
+  margin:auto;
 }
 
 #WoofCount{
